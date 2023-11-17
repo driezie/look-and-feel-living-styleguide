@@ -1,59 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[Projectnaam] living styleguide</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>[Projectnaam] styleguide v0.1</h1>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living styleguide - Jelte Cost</title>
+    <link rel="stylesheet" href="https://driezie.github.io/white-portfolio/assets/css/style.css">
 
-    <nav>
-      <ul>
-        <li><a href="/" class="active">Globals</a></li>
-        <li><a href="/">...</a></li>
-      </ul>
-    </nav>
+    <script src="https://driezie.github.io/white-portfolio/assets/js/scrolled.js" crossorigin="anonymous" defer></script>
+    <script src="https://driezie.github.io/white-portfolio/assets/js/main.js" crossorigin="anonymous" defer></script>
 
-    <main>
-      <h2>Globals</h2>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.css">
+    </head>
+<body>
+   
 
-      <section>
-        <h3>Header</h3>
-        <img src="screenshot_van_je_header.png" alt="screenshot van je header" />
 
-        <h4>Wel doen</h4>
-        <p>Vertel hoe dingen toegepast moeten worden.</p>
+    <div class="container top-nav" id="navigation" >
+        <div class="nav-container">
+            <div class="brand">
+                <a href="https://driezie.github.io/white-portfolio/#top">Jelte Cost</a>
+            </div>
+            <nav class="nav-menu" role="navigation">
+                <a href="https://driezie.github.io/white-portfolio/#top" class="nav-link">Portfolio</a>
+                <a href="https://driezie.github.io/white-portfolio/#about" class="nav-link">About me</a>
+                <a href="https://driezie.github.io/white-portfolio/#work" class="nav-link">Latest Work</a>
+                <!-- <a href="./blogs" class="nav-link">Blog</a> -->
+                <a href="https://driezie.github.io/white-portfolio/#contact" class="nav-link btn btn-black">Lets Talk</a>
+            </nav>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <img src="https://driezie.github.io/white-portfolio//assets/svg/menu.svg" alt="Menu">
+            </button>
+        </div>
+        
+        
+    </div>
 
-        <h4>Niet doen</h4>
-        <p>Vertel hoe dingen vooral niet toegepast moeten worden.</p>
 
-        <!-- Om HTML in HTML te laten zien gebruik je &lt; voor de < en &gt; voor de > -->
-        <pre><code>&lt;header&gt;
-  &lt;h1&gt;Zo maak je een header&lt;/h1&gt;
-&lt;/header&gt;
+    <header class="container">
+        <div class="header-info">
+            <div class="content">
+                <p class="hello-im">v1.0</p>
+                <h1 class="big-heading">Living style guide (Funda)</h1>
+                <p class="main-des-text" style="max-width: 522px;">
+                    This is the living styleguide for Funda. We have been tasked to make a custom styleguide for Funda. Here you can find all the components and the documentation for the components.
+                </p>
+                <a href="#compontent1" class="btn btn-black">Read more</a>
+            </div>
+        </div>
+    </header>  
 
-header {
-  background-color: white;
-  margin-bottom: 1rem;
-  color: silver;
-}
+    <style>
 
-header > h1 {
-  font-size: 1rem;
-  text-align: right;
-}
-  </code></pre>
-      </section>
+      .section-default h3 {
+        font-size: 40px;
+        line-height: 60px;
+      }
+      .default-grid {
+        position: relative;
+        /* flex-wrap: wrap; */
+        gap: 20px;
+        justify-content: left;
 
-      <section>
-        <h3>Footer</h3>
-        ...
-      </section>
-    </main>
-  </body>
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+      }
+
+      .default-grid .item {
+        text-decoration: none;
+        cursor: pointer;
+        height: 324px;
+        position: relative;
+        border-radius: 3px;
+        border: 1px solid rgb(238, 238, 238);
+        background-color: white;
+        display: block;
+      }
+
+      .default-grid .content {
+        padding: 16px 16px 0px;
+        margin: 0px 0px 16px;
+        height: 0px;
+        flex: 1 1 0%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .default-grid img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-radius: 3px;
+        object-fit: cover;
+        width: 100%;
+        height: 200px !important;
+      }
+
+      .default-grid .content h4{
+        color: black;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+        
+      }
+
+      .default-grid .content p {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: rgb(153, 153, 153);
+        width: 100%;
+        border: 0px;
+        outline: 0px;
+        flex: 1 1 0%;
+        height: 0px;
+        line-height: 17px;
+      }
+
+      .default-article {
+        background-color: #181818;
+        padding: 16px;
+        border-radius: 3px;
+        border: 1px solid rgb(238, 238, 238);
+        /* background-color: white; */
+        display: block;
+        margin: 20px 0;
+      }
+
+      .default-article h4 {
+        color: var(--secondary-text-color);
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .default-article h5 {
+        color: black;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .default-article img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-radius: 3px;
+        object-fit: cover;
+        width: 50%;
+
+        height: 400px !important;
+        object-fit: contain;
+        margin: 10px 0;
+
+      }
+    </style>
+
+    <section class="section-default container" id="compontent1">
+      <h3>
+        Basics
+      </h3>
+      <div class="default-grid">
+          
+
+          <a class="item" href="#logo">
+            <img src="./img/funda_logo.png" alt="">
+            <!-- content -->
+            <div class="content">
+              <h4>
+                Logo
+              </h4>
+              <p>
+                Voor iedere plek het juiste logo
+              </p>
+            </div>
+        </a>
+
+        <a class="item" href="#typo">
+          <img src="./img/Typografie.png" alt="">
+          <!-- content -->
+          <div class="content">
+            <h4>
+              Typografie
+            </h4>
+            <p>
+              Proxima Nova is een van de belangrijkste huisstijlelementen
+            </p>
+          </div>
+      </a>
+
+      <a class="item" href="#colors">
+        <img src="./img/colors.png" alt="">
+        <!-- content -->
+        <div class="content">
+          <h4>
+            Kleuren
+          </h4>
+          <p>
+            De hoofdkleuren van funda karakteriseren diversiteit en levendigheid
+          </p>
+        </div>
+    </a>
+
+
+    <a class="item" href="#toneofvoice">
+      <img src="./img/toneofvoice.png" alt="">
+      <!-- content -->
+      <div class="content">
+        <h4>
+          Tone of voice
+        </h4>
+        <p>
+          Dit zijn de belangrijke tone of voice methoden die wij gebruiken
+        </p>
+      </div>
+  </a>
+
+  <a class="item" href="#vormen">
+    <img src="./img/vormen.png" alt="">
+    <!-- content -->
+    <div class="content">
+      <h4>
+        Vormen
+      </h4>
+      <p>
+        Vaste elementen voor een herkenbare stijl
+      </p>
+    </div>
+</a>
+
+<a class="item" href="#compositieenhiërarchie">
+  <img src="./img/her.png" alt="">
+  <!-- content -->
+  <div class="content">
+    <h4>
+      Compositie & hierarchie
+    </h4>
+    <p>
+      Elementen verbinden en prioriteren
+    </p>
+  </div>
+</a>
+          
+
+        
+            
+        </div>
+    </section>
+
+    <section class="section-default container" id="compontent1">
+      <h3>Documentation</h3>
+
+      <article class="default-article" id="logo">
+        <h4>Logo</h4>
+        <p>
+          We bereiken onze gebruikers op verschillende plekken: funda wonen, funda voor makelaars, funda in business en de funda desk. Alle vier hebben een eigen logo waardoor de gebruiker weet waar hij zich bevindt.
+        </p>
+        <img src="./img/funda_logo.png" alt="">
+
+        <ul>
+          <li>
+            Het logo met de oranje rand is het primaire logo, verwijzend naar de oranje hoofdkleur van funda wonen. Je gebruikt dit logo op een witte achtergrond.
+          </li>
+          <li>
+            Het logo met de blauwe rand gebruik je alleen bij een oranje achtergrond. Probeer het gebruik van dit logo op een niet-oranje achtergrond te vermijden.
+          </li>
+        </ul>
+
+        <h5>
+          Plaatsing
+        </h5>
+        <p>De plaatsing van het logo is afhankelijk van het doel van de communicatie-uiting</p>
+
+        <ul>
+          <li>
+            <b>Informatief:</b> uitlijning bij voorkeur rechts of links om leesgemak te bevorderen, denk aan brochures. In video's kan het logo klein rechts- of linksboven in de hoek geplaatst worden.
+          </li>
+          <li>
+            <b>Inspirerend:</b> uitlijning mag ook in het midden, denk aan presentatie covers en campagneposters
+          </li>
+        </ul>
+        <img src="./img/logo_witruimte.png" alt="">
+        <img src="./img/logo_witruimte2.png" alt="">
+      </article>
+      
+      <article class="default-article" id="typo">
+        <h4>Typografie</h4>
+        <p>
+          Het is ons lettertype; leesbaar voor zowel web, app als print. Proxima Nova heeft een vriendelijk uiterlijk en is zowel karakteristiek als flexibel.  
+        </p>
+      </article>
+
+      <article class="default-article" id="colors">
+        <h4>Kleuren</h4>
+        <p>
+          Je vindt hier een overzicht van onze primaire en secundaire merkkleuren. <br>En de verhouding waarin ze worden gebruikt.
+        </p>
+      </article>
+
+      <article class="default-article" id="toneofvoice">
+        <h4>Tone of voice</h4>
+        <p>
+          We schrijven over onderwerpen die geen dagelijkse kost zijn voor onze doelgroepen. Voor ons wel. We weten dus we waar we het over hebben, maar zijn nooit belerend. Ook doen we geen aannames. We snappen dat iedereen een andere situatie heeft en houden daar rekening mee. In de manier waarop we schrijven. En de dingen waarover we schrijven. ​
+        </p>
+      </article>
+
+      <article class="default-article" id="vormen">
+        <h4>Vormen</h4>
+        <p>
+          Herkenbaarheid in design en uitingen is belangrijk. Door het toepassen van vormen breng je hierarchie, dynamiek en moderniteit naar de algemene uitstraling van de brand.
+        </p>
+      </article>
+
+      <article class="default-article" id="compositieenhiërarchie">
+        <h4>Compositie & hierarchie</h4>
+        <p>
+          Compositie betekent het samenstellen van verschillende elementen om een geheel te vormen. Hiërarchie is een manier om elementen, maar ook personen en gegevens te ordenen op basis van belangrijkheid of rang. In visual design komen compositie en hiërarchie samen in de vorm van layouts die gebruikt kunnen worden in communicatie uitingen om een boodschap over te brengen en een prettig ervaring te leveren aan de ontvanger.
+        </p>
+      </article>
+
+
+    </section>
+    
+
+
+    <!-- info here -->
+
+
+
+
+
+    <section class="section-footer">
+        <div class="container">
+            <div class="footer-desc">
+                <img src="https://driezie.github.io/white-portfolio//assets/img/5fe924272e6bd7888b796bc5_footer-cube-1.png" alt="Arrow">
+                <h3>You only have one chance to make a first impression.</h3>
+                <h4>Let's make it an amazing one.</h4>    
+            </div>
+            
+            <div class="footer-categories-grid">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="https://driezie.github.io/white-portfolio/#top" title="">Portfolio</a></li>
+                    <li><a href="https://driezie.github.io/white-portfolio/#about" title="">About me</a></li>
+                    <li><a href="https://driezie.github.io/white-portfolio/#work" title="">Latest Work</a></li>
+                    <!-- <li><a href="./blogs" title="">Blogs</a></li> -->
+                    <li><a href="https://driezie.github.io/white-portfolio/#contact" title="">Lets Talk</a></li>
+                </ul>
+                
+                
+            </div>
+          
+            
+        </div>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/jelte-cost/">
+                    <img src="https://driezie.github.io/white-portfolio/assets/img/LinkedIn.png" alt="Linkedin">
+                </a>
+                <a href="https://github.com/driezie">
+                    <img src="https://driezie.github.io/white-portfolio/assets/img/github-mark-white.png" alt="Github">
+                </a>
+                <a href="https://twitter.com/DevvJust">
+                    <img src="https://driezie.github.io/white-portfolio/assets/img/Twitter.png" alt="Twitter">
+                </a>
+                
+                
+                
+                
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyrights-text">
+                <div>
+                <p class="text-small">© 2023, Jelte Cost</p>
+                </div>
+                <div>
+                <a href="#top" class="backtotop w-inline-block">
+                    <p class="text-small">Back To Top</p>
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <script src="./assets/js/loco.js"></script> -->
+    <script>
+        // (function () {
+        //     var scroll = new LocomotiveScroll();
+        // })();
+    </script>
+
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+</body>
 </html>

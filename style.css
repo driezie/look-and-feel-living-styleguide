@@ -67,3 +67,8 @@ pre {
   background: DarkSlateGray;
   color: white;
 }
+
+
+.default-article {
+  background-color: transparent!important;
+}
